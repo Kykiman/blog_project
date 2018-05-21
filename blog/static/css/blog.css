@@ -2,10 +2,14 @@
     font-family: "Chivo";
     src: url("static/fonts/Chivo.woff") format("woff");
    }
+@font-face {
+    font-family: "Courier";
+    src: url("static/fonts/Courier.woff") format("woff");
+   }
 
 body {
     background-color: #EBEBEB;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Courier';
 }
 h1, a {
     color: black;
