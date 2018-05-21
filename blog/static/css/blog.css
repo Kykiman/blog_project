@@ -1,4 +1,45 @@
-div.page-header {
-display: flex;
-justify-content: center;
+@font-face {
+    font-family: "Chivo";
+    src: url("static/fonts/Chivo.woff") format("woff");
+   }
+
+body {
+    background-color: #EBEBEB;
+    font-family: 'Courier New', Courier, monospace;
 }
+h1, a {
+    color: black;
+    font-family: "Chivo", serif;
+}
+div.page-header {
+    display: flex;
+    justify-content: center;
+}
+.botpost {
+    display: flex;
+    justify-content: space-between;
+}
+.post {
+    background-color: #ffffff;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+.avgSizeDetailled{
+    font-size: 25px;
+}
+.h1SizeDetailled{
+    font-size: 60px;
+}
+.date, .author {
+    font-size: 20px;
+}
+.mainBlock{
+    background-color: #C1272D;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+@media screen and (max-width: 992px) {
+    .twitterFeed{
+        display: none;
+    }
+  }

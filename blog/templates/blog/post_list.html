@@ -1,14 +1,27 @@
 {% extends 'blog/base.html' %}
 
 {% block content %}
+    <div class="col-md-8"> 
     {% for post in posts %}
-        <div class="post">
-            
-            <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
+       <div class="post">
+
+            <h1>
+                <a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a>
+            </h1>
             <p>{{ post.text|linebreaksbr }}</p>
-            <div class="date">
-                {{ post.published_date }}
+            <div class="botpost">
+                <div class="date">
+                    {{ post.published_date }}
+                </div>
+                <div class="author">
+                   by {{ post.author }}
+                </div>
             </div>
         </div>
     {% endfor %}
+</div>
+<div class="col-md-4 twitterFeed">
+    <a class="twitter-timeline" data-height="900" data-link-color="#E81C4F" href="https://twitter.com/vix_digital?ref_src=twsrc%5Etfw">Tweets by vix_digital</a>
+    <script async="async" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div>
 {% endblock %}
